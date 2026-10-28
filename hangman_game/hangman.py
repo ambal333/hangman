@@ -1,27 +1,14 @@
-from pathlib import Path
 import random
 from hangman_game.render.gallows import draw_gallows
-
+from hangman_game.get_word.r_file import read_file
 
 class Hangman:
     def __init__(self):
         self.fault = 0
         self.resume = 0
 
-    @staticmethod
-    def read_file():
-        words = []
-        try:
-            path = Path("./words/russian_words")
-            with path.open("r", encoding="utf-8") as f:
-                for line in f:
-                    words.append(line.strip())
-        except FileNotFoundError:
-            return f"файла не существует"
-        return words
-
     def random_word(self):
-        list_words = self.read_file()
+        list_words = read_file()
         word = random.choice(list_words)
         return word
 
