@@ -1,7 +1,6 @@
 def draw_gallows(attempt):
-    gallows_1 = ""
-    if attempt == 0:
-        gallows_1 = [
+    gallows = {
+        1: [
             "_" * 5,
             "\n",
             "|",
@@ -13,9 +12,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 1:
-        gallows_1 = [
+        ],
+        2: [
             "_" * 5,
             "\n",
             "|",
@@ -29,9 +27,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 2:
-        gallows_1 = [
+        ],
+        3: [
             "_" * 5,
             "\n",
             "|",
@@ -47,9 +44,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 3:
-        gallows_1 = [
+        ],
+        4: [
             "_" * 5,
             "\n",
             "|",
@@ -66,9 +62,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 4:
-        gallows_1 = [
+        ],
+        5: [
             "_" * 5,
             "\n",
             "|",
@@ -86,9 +81,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 5:
-        gallows_1 = [
+        ],
+        6: [
             "_" * 5,
             "\n",
             "|",
@@ -109,9 +103,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 6:
-        gallows_1 = [
+        ],
+        7: [
             "_" * 5,
             "\n",
             "|",
@@ -133,9 +126,8 @@ def draw_gallows(attempt):
             "|\n",
             "|\n",
             "_" * 2,
-        ]
-    elif attempt == 7:
-        gallows_1 = [
+        ],
+        8: [
             "_" * 5,
             "\n",
             "|",
@@ -159,4 +151,5 @@ def draw_gallows(attempt):
             "|\n",
             "_" * 2,
         ]
-    return "".join(gallows_1)
+    }
+    return ''.join(gallows.get(attempt))
